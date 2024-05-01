@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./packages.nix
-      ./hardware.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./packages.nix
+    ./hardware.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -69,10 +70,10 @@
   users.users.mi = {
     isNormalUser = true;
     description = "mi";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -98,6 +99,11 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  nix.nixPath = [
+    "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+    "nixos-config=/home/mi/dotfiles/nixos/config.nix"
+    "/nix/var/nix/profiles/per-user/root/channels"
+  ];
 
   system.stateVersion = "23.11";
 }
