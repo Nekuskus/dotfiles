@@ -17,5 +17,6 @@
     alejandra
     hyfetch
     neofetch
+    fastfetch
   ];
 }
