@@ -12,4 +12,11 @@ nixos-rebuild switch
 unlink /etc/nixos
 
 mv dotfiles /home/mi/dotfiles
+
+# TODO: Separate post-install into smaller scripts for i3, bash, ...
+
+cd /home/mi
+ln -s dotfiles/scripts .local/bin
+ln -s dotfiles/bash/.bashrc .bashrc
+
 passwd mi
