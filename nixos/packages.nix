@@ -21,7 +21,7 @@
     git
     gh
     htop
-    lspci
+    pciutils
     wineWowPackages.stable
 
     # Toolchains
