@@ -46,25 +46,25 @@
   fileSystems."/C" = {
     device = "/dev/disk/by-uuid/A6DC741EDC73E6C9";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1001,gid=100"];
+    options = ["rw" "uid=1001" "gid=100" "dmask=0007" "fmask=0117"];
   };
 
   fileSystems."/D" = {
     device = "/dev/disk/by-uuid/7876885D76881E4E";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1001,gid=100"];
+    options = ["rw" "uid=1001" "gid=100" "dmask=0007" "fmask=0117"];
   };
 
   fileSystems."/E" = {
     device = "/dev/disk/by-uuid/304020A74020762E";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1001,gid=100"];
+    options = ["rw" "uid=1001" "gid=100" "dmask=0007" "fmask=0117"];
   };
 
   fileSystems."/data" = {
     device = "/dev/disk/by-uuid/1FD7DBD054399698";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1001,gid=100"];
+    options = ["rw" "uid=1001" "gid=100" "dmask=0007" "fmask=0117"];
   };
 
   swapDevices = [
