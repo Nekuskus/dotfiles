@@ -16,7 +16,11 @@
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
+
+  boot.loader.grub.enable = true;
   boot.loader.grub.gfxmodeEfi = "2560x1440x10";
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.useOSProber = true;
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/cf528388-0c14-46b3-8903-9b5be336cff3";
