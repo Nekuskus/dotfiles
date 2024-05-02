@@ -17,9 +17,10 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
-  boot.supportedFilesystems = ["ntfs"];
+  #   probably unnecessary
+  #   boot.supportedFilesystems = ["ntfs"];
 
-  #   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.loader.grub.enable = lib.mkForce true;
