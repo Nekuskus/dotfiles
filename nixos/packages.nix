@@ -21,7 +21,9 @@
     gh
     htop
     pciutils
+    winetricks
     wineWowPackages.stable
+    psmisc # killall, ...
 
     # Toolchains
     rustup
