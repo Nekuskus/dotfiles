@@ -23,6 +23,27 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  systemd = {
+    targets = {
+      sleep = {
+        enable = false;
+        unitConfig.DefaultDependencies = "no";
+      };
+      suspend = {
+        enable = false;
+        unitConfig.DefaultDependencies = "no";
+      };
+      hibernate = {
+        enable = false;
+        unitConfig.DefaultDependencies = "no";
+      };
+      "hybrid-sleep" = {
+        enable = false;
+        unitConfig.DefaultDependencies = "no";
+      };
+    };
+  };
+
   #   boot.loader.grub.enable = lib.mkForce true;
   #   boot.loader.grub.gfxmodeEfi = "2560x1440x10";
   #   boot.loader.grub.device = "nodev";
