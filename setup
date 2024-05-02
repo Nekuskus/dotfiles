@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+git clone https://github.com/Nekuskus/dotfiles
+pushd /etc/nixos
+rm *
+popd
+cd dotfiles/nixos
+
+ln -s . /etc/nixos
+nixos-rebuild switch

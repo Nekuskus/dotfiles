@@ -1,4 +1,7 @@
-{config, ...}: {
+{
+  config,
+  ...
+}: {
   time.timeZone = "Europe/Warsaw";
   i18n.defaultLocale = "en_GB.UTF-8";
 
