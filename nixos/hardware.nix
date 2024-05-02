@@ -17,6 +17,9 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
+  #   boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   boot.loader.grub.enable = lib.mkForce true;
   boot.loader.grub.gfxmodeEfi = "2560x1440x10";
   boot.loader.grub.device = "nodev";
