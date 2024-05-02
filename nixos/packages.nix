@@ -4,6 +4,14 @@
   ...
 }: {
   programs.firefox.enable = true;
+  programs.java.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    package = pkgs.steam.override {withJava = true;};
+    gamescopeSession.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     # Utils
@@ -12,13 +20,15 @@
     neovim
     git
     gh
+    htop
+    lspci
+    wineWowPackages.stable
 
     # Toolchains
     rustup
 
     # Usermode applications
     discord
-    steam
     alejandra
     hyfetch
     neofetch

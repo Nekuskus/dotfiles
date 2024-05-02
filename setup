@@ -8,6 +8,7 @@ popd
 
 cd dotfiles/nixos
 ln -s . /etc/nixos
+cp /etc/nixos-backup/hardware-configuration.nix /etc/nixos/hardware.nix
 nixos-rebuild switch
 unlink /etc/nixos
 
