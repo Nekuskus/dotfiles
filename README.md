@@ -8,5 +8,5 @@ sudo bash <(curl -s https://raw.githubusercontent.com/Nekuskus/dotfiles/master/s
 ```
 
 > [!WARNING]
-> The script will override `/etc/nixos/` (avoids error-prone `$NIX_PATH` troubles) and other `/.config/` paths, particularly ones intended for `i3`.
+> The script will override `/etc/nixos/` (stores a backup in `/etc/nixos-backup`, avoids error-prone `$NIX_PATH`) and other `~/.config/` paths, particularly ones intended for `i3`.
 > Consider backing them up before running, unless you have your own setup script that will undo these changes.
