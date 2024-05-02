@@ -36,7 +36,6 @@
   services.gnome.gnome-keyring.enable = true;
 
   services.xserver.enable = true;
-  services.xserver.displayManager.defaultSession = "sway";
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "mi";
 
