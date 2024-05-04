@@ -23,38 +23,45 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  systemd = {
-    targets = {
-      sleep = {
-        enable = false;
-        unitConfig.DefaultDependencies = "no";
-      };
-      suspend = {
-        enable = false;
-        unitConfig.DefaultDependencies = "no";
-      };
-      hibernate = {
-        enable = false;
-        unitConfig.DefaultDependencies = "no";
-      };
-      "hybrid-sleep" = {
-        enable = false;
-        unitConfig.DefaultDependencies = "no";
-      };
-    };
-  };
-
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=no
-    AllowHibernation=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
+  #   systemd = {
+  #     targets = {
+  #       sleep = {
+  #         enable = false;
+  #         unitConfig.DefaultDependencies = "no";
+  #       };
+  #       suspend = {
+  #         enable = false;
+  #         unitConfig.DefaultDependencies = "no";
+  #       };
+  #       hibernate = {
+  #         enable = false;
+  #         unitConfig.DefaultDependencies = "no";
+  #       };
+  #       "hybrid-sleep" = {
+  #         enable = false;
+  #         unitConfig.DefaultDependencies = "no";
+  #       };
+  #     };
+  #   };
+  #
+  #   systemd.sleep.extraConfig = ''
+  #     AllowSuspend=no
+  #     AllowHibernation=no
+  #     AllowHybridSleep=no
+  #     AllowSuspendThenHibernate=no
+  #   '';
 
   #   boot.loader.grub.enable = lib.mkForce true;
   #   boot.loader.grub.gfxmodeEfi = "2560x1440x10";
   #   boot.loader.grub.device = "nodev";
   #   boot.loader.grub.useOSProber = true;
+
+  environment.etc = {
+    set-ntfs3g-file = {
+      source = "/home/mi/dotfiles/scripts/setntfs3g";
+      mode = "0440";
+    };
+  };
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/cf528388-0c14-46b3-8903-9b5be336cff3";

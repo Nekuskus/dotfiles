@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+chown root:ntfsuser $(which ntfs-3g)
+chmod 4750 $(which ntfs-3g)
