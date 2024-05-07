@@ -6,7 +6,7 @@
   users.users.mi = {
     isNormalUser = true;
     description = "mi";
-    extraGroups = ["networkmanager" "wheel" "ntfsuser"];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kate
       thunderbird

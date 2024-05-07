@@ -11,7 +11,7 @@
     ./users.nix
     ./fonts.nix
     ./packages.nix
-    ./hardware.nix
+    ./hardware-configuration.nix
   ];
 
   services.printing.enable = true;
@@ -20,7 +20,7 @@
 
   nix.nixPath = [
     "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-    "nixos-config=/home/mi/dotfiles/nixos/config.nix"
+    "nixos-config=/home/mi/dotfiles/nixos/configuration.nix"
     "/nix/var/nix/profiles/per-user/root/channels"
   ];
 
