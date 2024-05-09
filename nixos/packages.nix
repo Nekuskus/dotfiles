@@ -36,6 +36,7 @@
     wineWowPackages.stable
     psmisc # killall, ...
     beep
+    nmap-unfree
 
     # System config
     acl
