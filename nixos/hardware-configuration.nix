@@ -14,6 +14,20 @@
   boot.kernelModules = ["kvm-amd" "pcspkr"];
   boot.extraModulePackages = [];
 
+  nixpkgs.overlays = [
+    (
+      self: super: {
+        # Enable pcspkr by uncommenting a line in /etc/modprobe.d/uubuntu.conf:blacklist.conf
+        kmod-blacklist-ubuntu = super.kmod-blacklist-ubuntu.overrideAttrs (old: {
+          fixupPhase = ''
+            substituteInPlace "$out"/modprobe.conf \
+            --replace "blacklist pcspkr" "#blacklist pcspkr"
+          '';
+        });
+      }
+    )
+  ];
+
   #   probably unnecessary
   #   boot.supportedFilesystems = ["ntfs"];
 
