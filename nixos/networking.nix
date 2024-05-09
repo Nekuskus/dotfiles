@@ -23,4 +23,12 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  systemd.user.services.tailscaleCert = {
+    description = "...";
+    script = ''
+      sudo tailscale cert $(hostname).ts.net
+    '';
+    wantedBy = [ "multi-user.target" ]; # starts after login
+  }
 }

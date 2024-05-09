@@ -11,6 +11,7 @@
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
+  services.tailscale.enable = true;
 
   environment.systemPackages = with pkgs; [
     # Utils
