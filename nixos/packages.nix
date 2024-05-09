@@ -35,6 +35,10 @@
     winetricks
     wineWowPackages.stable
     psmisc # killall, ...
+    beep
+
+    # System config
+    acl
 
     # Toolchains
     rustup
