@@ -29,6 +29,6 @@
     script = ''
       sudo tailscale cert $(hostname).ts.net
     '';
-    wantedBy = [ "multi-user.target" ]; # starts after login
-  }
+    wantedBy = ["multi-user.target"]; # starts after login
+  };
 }
