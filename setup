@@ -19,6 +19,7 @@ mv dotfiles /home/mi/dotfiles
 cd /home/mi
 ln -s dotfiles/scripts .local/bin
 ln -s dotfiles/bash/.bashrc .bashrc
+ln -s dotfiles/bash/.bash_profile .bash_profile
 ln -s dotfiles/bash/.sshrc .ssh/rc
 
 passwd mi

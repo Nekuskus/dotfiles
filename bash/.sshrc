@@ -1,6 +1,3 @@
 gen=$(nixos-rebuild list-generations 2>/dev/null | grep current)
 echo "Welcome to Furth!"
 echo "NixOS gen $gen"
-
-set -a
-source /home/mi/.bashrc
