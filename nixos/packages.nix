@@ -13,6 +13,15 @@
   };
   services.tailscale.enable = true;
 
+  services.openssh.enable = {
+    enable = true;
+    passwordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
+  };
+  users.users."mi".openssh.authorizedKeys.keyFiles = [
+    /home/mi/.ssh/authorized_keys
+  ];
+
   environment.systemPackages = with pkgs; [
     # Utils
     wget
