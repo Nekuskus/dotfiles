@@ -13,7 +13,7 @@
   };
   services.tailscale.enable = true;
 
-  services.openssh.enable = {
+  services.openssh = {
     enable = true;
     passwordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
