@@ -17,6 +17,7 @@
     enable = true;
     passwordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
+    settings.PermitRootLogin = "no";
   };
   users.users."mi".openssh.authorizedKeys.keyFiles = [
     /home/mi/.ssh/authorized_keys
