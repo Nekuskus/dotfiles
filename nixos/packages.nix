@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  chatoci
   ...
 }: {
   programs.firefox.enable = true;
