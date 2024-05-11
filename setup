@@ -9,7 +9,7 @@ popd
 cd dotfiles/nixos
 ln -s . /etc/nixos
 cp /etc/nixos-backup/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
-nixos-rebuild switch --flake ".#flake" --extra-experimental-features flakes
+nixos-rebuild switch --flake . --extra-experimental-features flakes
 unlink /etc/nixos
 
 mv dotfiles /home/mi/dotfiles

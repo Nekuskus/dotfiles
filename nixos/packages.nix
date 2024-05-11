@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  chaotic,
   ...
 }: {
   programs.firefox.enable = true;
@@ -12,7 +11,7 @@
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
-  chaotic.proton-ge-custom.enable = true;
+  #   chaotic.proton-ge-custom.enable = true;
 
   services.tailscale.enable = true;
   services.openssh = {
@@ -39,6 +38,11 @@
     psmisc # killall, ...
     beep
     nmap-unfree
+    alejandra
+
+    hyfetch
+    neofetch
+    fastfetch
 
     # System config
     acl
@@ -48,10 +52,6 @@
 
     # Usermode applications
     discord
-    alejandra
-    hyfetch
-    neofetch
-    fastfetch
 
     # Sway-specific
     grim # screenshot functionality, might switch to gnome scrot
@@ -59,5 +59,8 @@
     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
     mako # notification system developed by swaywm maintainer
     rofi
+
+    # chaotic's nyxpackages
+    proton-ge-custom
   ];
 }
