@@ -23,3 +23,6 @@ ln -s dotfiles/bash/.bash_profile .bash_profile
 ln -s dotfiles/bash/.sshrc .ssh/rc
 
 passwd mi
+
+
+systemctl reboot

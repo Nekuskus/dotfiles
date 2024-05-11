@@ -167,6 +167,8 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+  hardware.opengl.enable = true;
+
   powerManagement.enable = false;
   powerManagement.cpuFreqGovernor = "performance"; # maybe unnecessary? we'll see
 }
