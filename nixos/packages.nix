@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  chaotic,
   ...
 }: {
   programs.firefox.enable = true;
@@ -11,8 +12,9 @@
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
-  services.tailscale.enable = true;
+  chaotic.proton-ge-custom.enable = true;
 
+  services.tailscale.enable = true;
   services.openssh = {
     enable = true;
     passwordAuthentication = false;
