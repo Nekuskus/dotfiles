@@ -52,6 +52,8 @@
 
     # Toolchains
     rustup
+    python3
+    python311Packages.pip
 
     # Usermode applications
     discord
@@ -65,5 +67,9 @@
 
     # chaotic's nyxpackages
     proton-ge-custom
+  ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-id.libraries = with pkgs; [
   ];
 }
