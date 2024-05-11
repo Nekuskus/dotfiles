@@ -70,6 +70,6 @@
   ];
 
   programs.nix-ld.enable = true;
-  programs.nix-id.libraries = with pkgs; [
+  programs.nix-ld.libraries = with pkgs; [
   ];
 }
