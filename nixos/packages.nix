@@ -10,6 +10,9 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-custom
+    ];
   };
   #   chaotic.proton-ge-custom.enable = true;
 
