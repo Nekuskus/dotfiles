@@ -54,6 +54,7 @@
     rustup
     python3
     python311Packages.pip
+    node
 
     # Usermode applications
     discord
