@@ -14,8 +14,6 @@
     ./hardware-configuration.nix
   ];
 
-  services.printing.enable = true;
-
   nixpkgs.config.allowUnfree = true;
 
   nix.nixPath = [
@@ -25,6 +23,14 @@
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  # CUDA setup
+  environment.variable = {
+    CUDA_PATH = "${pkgs.cudatoolkit}";
+    EXTRA_LDFLAGS = "-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib";
+    EXTRA_CCFLAGS = "-I/usr/include";
+    #     LD_LIBRARY_PATH=${pkgs.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib;
+  };
 
   system.stateVersion = "23.11";
 }

@@ -58,6 +58,7 @@
 
     # Usermode applications
     discord
+    vscode
 
     # Sway-specific
     grim # screenshot functionality, might switch to gnome scrot

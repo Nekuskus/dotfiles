@@ -21,7 +21,7 @@
         kmod-blacklist-ubuntu = super.kmod-blacklist-ubuntu.overrideAttrs (old: {
           fixupPhase = ''
             substituteInPlace "$out"/modprobe.conf \
-            --replace "blacklist pcspkr" "#blacklist pcspkr"
+            --replace "blacklist pcspkr" "# blacklist pcspkr"
           '';
         });
       }
@@ -170,4 +170,6 @@
 
   powerManagement.enable = false;
   powerManagement.cpuFreqGovernor = "performance"; # maybe unnecessary? we'll see
+
+  services.printing.enable = true;
 }
