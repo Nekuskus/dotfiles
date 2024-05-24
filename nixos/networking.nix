@@ -24,6 +24,10 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "startplasma-x11";
+  services.xrdp.openFirewall = true;
+
   systemd.user.services.tailscaleCert = {
     description = "...";
     script = ''
