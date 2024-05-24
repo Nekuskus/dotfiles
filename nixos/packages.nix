@@ -45,7 +45,6 @@
     beep
     nmap-unfree
     alejandra
-    xauth
 
     hyfetch
     neofetch
@@ -95,6 +94,7 @@
     xorg.libX11
     xorg.libXv
     xorg.libXrandr
+    xorg.xauth
     zlib
     ncurses5
     stdenv.cc
