@@ -22,6 +22,9 @@
     passwordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
     settings.PermitRootLogin = "no";
+    settings.X11Forwarding = true;
+    settings.X11DisplayOffset = 10;
+    settings.X11UseLocalhost = false;
   };
   users.users."mi".openssh.authorizedKeys.keyFiles = [
     /home/mi/.ssh/authorized_keys
