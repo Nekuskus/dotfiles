@@ -45,6 +45,7 @@
     beep
     nmap-unfree
     alejandra
+    xauth
 
     hyfetch
     neofetch
