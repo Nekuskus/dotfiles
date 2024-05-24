@@ -62,6 +62,7 @@
     # Usermode applications
     discord
     vscode
+    xivlauncher
 
     # Sway-specific
     grim # screenshot functionality, might switch to gnome scrot
