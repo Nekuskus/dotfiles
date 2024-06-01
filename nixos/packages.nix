@@ -58,6 +58,8 @@
     python3
     python311Packages.pip
     nodejs
+    php
+    composer
 
     # Usermode applications
     discord
