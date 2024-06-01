@@ -58,7 +58,7 @@
     python3
     python311Packages.pip
     nodejs
-    php
+    php83
     php83Packages.composer
 
     # Usermode applications
