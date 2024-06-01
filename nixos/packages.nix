@@ -59,7 +59,7 @@
     python311Packages.pip
     nodejs
     php
-    composer
+    php83Packages.composer
 
     # Usermode applications
     discord
