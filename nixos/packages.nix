@@ -106,8 +106,5 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    openssl
-    openssl.dev
-    pkg-config
   ];
 }
