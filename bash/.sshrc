@@ -2,4 +2,4 @@ gen=$(nixos-rebuild list-generations 2>/dev/null | grep current)
 echo "NixOS gen $gen"
 echo -e "Welcome to Furth!\n"
 fastfetch
-weather-util -ip $SSH_CONNECTION -ip 
+weather-util

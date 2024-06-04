@@ -102,11 +102,12 @@
     ncurses5
     stdenv.cc
     binutils
-    openssl
-    pkg-config
   ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
+    openssl
+    openssl.dev
+    pkg-config
   ];
 }
