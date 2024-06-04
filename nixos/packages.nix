@@ -102,6 +102,7 @@
     ncurses5
     stdenv.cc
     binutils
+    openssl
   ];
 
   programs.nix-ld.enable = true;
