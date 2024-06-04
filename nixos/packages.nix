@@ -103,6 +103,7 @@
     stdenv.cc
     binutils
     openssl
+    pkg-config
   ];
 
   programs.nix-ld.enable = true;
