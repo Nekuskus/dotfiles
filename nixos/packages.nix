@@ -80,6 +80,7 @@
     nodejs
     php83
     php83Packages.composer
+    ruby
 
     # Usermode applications
     discord
