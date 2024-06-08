@@ -30,6 +30,16 @@
     /home/mi/.ssh/authorized_keys
   ];
 
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    openFirewall = true;
+    capSysAdmin = true;
+  };
+
+  services.avahi.publish.enable = true;
+  services.avahi.publish.userServices = true;
+
   # TODO: Not yet convinced because of Boox folder structure. Will revisit.
   # services = {
   #   syncthing = {
@@ -75,10 +85,6 @@
     discord
     vscode
     xivlauncher
-
-    # Game streaming
-    pkgs.sunshine
-    pkgs.moonlight-qt #for testing purposes.
 
     # Sway-specific
     grim # screenshot functionality, might switch to gnome scrot
