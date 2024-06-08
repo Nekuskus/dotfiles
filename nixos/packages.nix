@@ -30,6 +30,16 @@
     /home/mi/.ssh/authorized_keys
   ];
 
+  # TODO: Not yet convinced because of Boox folder structure. Will revisit.
+  # services = {
+  #   syncthing = {
+  #       enable = true;
+  #       user = "mi";
+  #       dataDir = "/home/mi/sync";    # Default folder for new synced folders
+  #       configDir = "/home/myusername/Documents/.config/syncthing";   # Folder for Syncthing's settings and keys
+  #   };
+  # };
+
   environment.systemPackages = with pkgs; [
     # Utils
     wget
@@ -65,6 +75,10 @@
     discord
     vscode
     xivlauncher
+
+    # Game streaming
+    pkgs.sunshine
+    pkgs.moonlight-qt #for testing purposes.
 
     # Sway-specific
     grim # screenshot functionality, might switch to gnome scrot
