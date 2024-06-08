@@ -81,6 +81,7 @@
     php83
     php83Packages.composer
     ruby
+    neocities-cli
 
     # Usermode applications
     discord
