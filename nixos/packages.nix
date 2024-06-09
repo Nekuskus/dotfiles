@@ -34,7 +34,6 @@
     enable = true;
     autoStart = true;
     openFirewall = true;
-    capSysAdmin = true;
   };
   security.wrappers.sunshine = {
     owner = "root";
